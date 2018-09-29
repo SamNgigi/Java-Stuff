@@ -51,3 +51,8 @@ Other features of the Java include.
 
 * Extensive Library
 * Free and Open-Source
+
+So Java is both compiled and interpreted. So first, what does for a language to be;
+
+* [Compiled](./compiled.md)
+* [Interpreted](./interpreted.md)
