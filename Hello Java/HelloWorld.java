@@ -4,3 +4,9 @@ class HelloWorld{
     System.out.println("Hello World in Java!");
   }
 }
+
+/*  
+  * We would compile this using
+  * java HelloWorld.java  ...then
+  * javac HelloWorld
+*/

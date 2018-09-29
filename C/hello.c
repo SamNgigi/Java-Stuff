@@ -7,5 +7,7 @@ int main(void)
 
 /* 
   * We would compile this with:
-  * cc -o hello hello.c
+  * cc -o hello hello.c 
+  * Then run
+  * ./hello
  */
