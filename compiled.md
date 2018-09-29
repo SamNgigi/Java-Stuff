@@ -68,3 +68,16 @@ This target language can be the programming language of a target OS, bytecode, o
 The compiler does additional operations to ease a programmers task and depending on the complexity of the operations, the compilation process may take some time.
 
 Once compiled though, the machine code execution is very fast and can be run anytime any amount of times.
+
+Only caveat though is that the source code has to be compiled by the OS platform supported compiler. The machine code generated would run only on that platform.
+
+## Just for fun Hello world in Java.
+
+```java
+class HelloWorldApp {
+  public static void main(String[] args) {
+    // Printing hello world.
+    System.out.println("Hello World!");
+  }
+}
+```
