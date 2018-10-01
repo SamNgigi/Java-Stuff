@@ -67,11 +67,16 @@ This target language can be the programming language of a target OS, bytecode, o
 
 The compiler does additional operations to ease a programmers task and depending on the complexity of the operations, the compilation process may take some time.
 
-Once compiled though, the machine code execution is very fast and can be run anytime any amount of times.
+Once compiled though, the machine code execution by the c.p.u. is very fast and can be run anytime any amount of times.
 
 Only caveat though is that the source code has to be compiled by the OS platform supported compiler. The machine code generated would run only on that platform.
 
-## Just for fun Hello world in Java.
+So to sum up
+> **Compilation** is the process by which high level source code is converted into executable machine code by a compiler. The machine code is then run by a computer's cpu to produce a result.
+>
+> Note that the compilation process and the execution happen separately and that the machine code generated is platform dependent.
+
+So below we have Java source code that represents a more high level notation of code that is more expressive and readable.
 
 ```java
 class HelloWorldApp {
@@ -81,3 +86,5 @@ class HelloWorldApp {
   }
 }
 ```
+
+Java is special because it is both **compiled** and **interpreted**. Next we have a look at the [interpreted](./interpreted) aspect.

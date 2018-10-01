@@ -43,7 +43,7 @@ Other features of the Java include.
     ```md
     Java compiler converts the Java code into byte code (.class files) and these byte codes are then run by Java Virtual Machine(JVM).
 
-    The JVM is an interpreter which is installed in each client machine that is updated with the latest security updates by internet. So when the byte codes are executed, the JVM can verify the byte code before it is run ensuring unsafe operations are not performed.
+    The JVM is an interpreter which is installed in each client machine that is updated with the latest security updates by internet. So when the byte codes are executed, the JVM can verify the bytecode before it is run ensuring unsafe operations are not performed.
 
     So compiled then interpreted.
     ```
@@ -55,4 +55,40 @@ Other features of the Java include.
 So Java is both compiled and interpreted. So first, what does for a language to be;
 
 * [Compiled](./compiled.md)
-* [Interpreted](./interpreted.md)
+* [Interpreted](./interpreted.md).
+
+Click on the above to read my understanding of compilation & interpretation.
+
+Java is first compiled from source code by the **Java compiler** into platform independent **bytecode**. Java bytecode can then be interpreted on any platform using the platform dependant Java Virtual Machine(JVM) which runs/executes the bytecode.
+
+So say we have a `Hello.java` source code file. We first run:
+
+```bash
+    javac Hello.java
+```
+
+to compile our source using the Java compiler. This results in a Hello.class bytecode file. Bytecode is compact and optimized for interpretation by the JVM. We then run:
+
+```bash
+    java Hello
+```
+
+The above creates an instance of JVM , which means that the cpu loads JVM into memory then the JVM executes Hello.class.
+
+The **JVM** takes care of the **platform independence** aspect of java programs.
+
+Java code is must faster that other interpreted languages because of;
+
+* **Java Bytecode**
+    Compact and optimized compiled source code that allows for faster interpretation.
+
+    Bytecode compactness allows for quick transfer across networks.
+
+* **Just-in-time(JIT) compilation**
+      * This is whereby the jvm identifies frequently executed bytecode that we call **hot spots.**
+      * The JIT compiler converts **hot-spots** to machine code
+      * This machine code is then cached.
+
+    This means that frequently interpreted does not need to be interpreted but the corresponding cached machine code is executed. This result to increased speed when running java code.
+
+Lets take a look at how the JVM works. Click [Here](./JVM.md).
