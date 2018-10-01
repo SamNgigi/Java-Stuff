@@ -11,8 +11,13 @@ class StudentTest {
     // * updating profile with correct name
     student.updateProfile("Sam");
 
-    System.out
-        .println(String.format("Hi my name is %s and am the Alpha-%s #%d", student.name, student.gender, student.id));
+    /*
+     * System.out .println(String.format("Hi my name is %s and am the Alpha-%s #%d",
+     * student.name, student.gender, student.id));
+     * 
+     * or
+     */
+    System.out.printf("Hi my name is %s and I am number %d\n", student.name, student.id);
 
   }
 }
