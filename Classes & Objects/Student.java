@@ -4,7 +4,7 @@ class Student {
   String name;
   String gender;
 
-  // Method definitions
+  // Method definitions. Test
   boolean updateProfile(String newName) {
     name = newName;
     return true;
