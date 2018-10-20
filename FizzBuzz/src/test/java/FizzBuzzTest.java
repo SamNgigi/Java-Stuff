@@ -9,7 +9,9 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class FizzBuzzTest {
     /*
@@ -29,18 +31,77 @@ public class FizzBuzzTest {
     *
     * */
     @Test
-    public void runFizzBuzz_countUpTo_ArrayList(){
+    public void runFizzBuzz_countUpTo1_ArrayList(){
         /*
-        * Defining our sample_fizz_buzz object of type FizzBuzz which is an instance of the FizzBuzz
+        * Defining our example_fizzbuzz_object of type FizzBuzz which is an instance of the
+        * FizzBuzz
         * class
         * */
-        FizzBuzz sample_fizz_buzz = new FizzBuzz();
+        FizzBuzz example_fizzbuzz_object = new FizzBuzz();
         // We define a list/array which is an instance of the ArrayList class
-        List<Object> expected_output_array = new ArrayList<Object>();
-        // We add 1 to our expected_output_array
-        expected_output_array.add(1);
+        List<Object> expected_result_arrList = new ArrayList<Object>();
+        // We add 1 to our expected_result_arrList
+        expected_result_arrList.add(1);
         /*
-        * We compare if our expected_output_array is the same */
-        assertEquals(expected_output_array, sample_fizz_buzz.runFizzBuzz(1));
+        * We compare if our expected_result_arrList is the same */
+        assertEquals(expected_result_arrList, example_fizzbuzz_object.runFizzBuzz(1));
+    }
+    /* Test to confirm our runFizzBuzz method is count up. In this case to 2. */
+    @Test
+    public void runFizzBuzz_countUpToGivenNumber_ArrayList(){
+        FizzBuzz example_fizzbuzz_object = new FizzBuzz();
+        List<Object> expected_result_arrList = new ArrayList<Object>();
+        expected_result_arrList.add(1);
+        expected_result_arrList.add(2);
+        assertEquals(expected_result_arrList, example_fizzbuzz_object.runFizzBuzz(2));
+        /*
+        * Here when we call the example_fizz_buzz.runFizzBuz(2) method, it will invoke our loop
+        * and add all i to our result array*/
+    }
+    /*
+    * Test to confirm that multiples of 3 will return Fizz
+    * */
+    @Test
+    public void runFizzBuzz_replaceMultiplesOf3_ArrayList(){
+        FizzBuzz example_fizzbuzz_object = new FizzBuzz();
+        List<Object> expected_result_arrList = new ArrayList<Object>();
+        expected_result_arrList.add(1);
+        expected_result_arrList.add(2);
+        expected_result_arrList.add("Fizz");
+        assertEquals(expected_result_arrList, example_fizzbuzz_object.runFizzBuzz(3));
+    }
+    /* Test to confirm that multiples of 5 will return Buzz */
+    @Test
+    public void runFizzBuzz_replaceMultiplesOf5_ArrayList(){
+        FizzBuzz example_fizzbuzz_object = new FizzBuzz();
+        List<Object> expected_result_arrList = new ArrayList<Object>();
+        /* Adding multiple objects to our ArrayList at once. */
+        Collections.addAll(expected_result_arrList,
+                    1, 2, "Fizz", 4, "Buzz"
+                );
+        assertEquals(expected_result_arrList, example_fizzbuzz_object.runFizzBuzz(5));
+    }
+    /* Test to confirm that multiples of both 3 & 5 will be replaced with FizzBuzz */
+    @Test
+    public void runFizzBuzz_replaceMultiplesOf3And5_ArrayList(){
+        FizzBuzz example_fizzbuzz_object = new FizzBuzz();
+        List<Object> expected_result_arrList = new ArrayList<Object>();
+        Collections.addAll(expected_result_arrList,
+                1, 2, "Fizz", 4, "Buzz",
+                "Fizz", 7, 8, "Fizz", "Buzz",
+                11, "Fizz", 13, 14, "FizzBuzz"
+                );
+        assertEquals(expected_result_arrList, example_fizzbuzz_object.runFizzBuzz(15));
     }
 }
+
+
+
+/*
+* Note that we are trying to break our FizzBuzz functionality to the smallest component. That is
+* why we are testing to see if it can return an ArrayList with a value of 1 to start
+*
+* We then se if it can return an ArrayList with both 1,2 even before we get to 3. This is
+* because once we get to 3 we have to make a test that return an Array list with "fizz" instead of
+* 3 in the ArrayList.
+* */
